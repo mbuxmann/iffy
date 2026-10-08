@@ -1,6 +1,5 @@
 import OpenAI from "openai";
 
-import * as schema from "@/db/schema";
 import { Context, StrategyResult } from "@/services/moderations";
 import { StrategyInstance } from "./types";
 import { env } from "@/lib/env";
@@ -8,6 +7,7 @@ import { entries } from "@/lib/utils";
 import { z } from "zod";
 
 const openai = new OpenAI({
+  
   apiKey: env.OPENAI_API_KEY,
 });
 
